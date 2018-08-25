@@ -1,10 +1,14 @@
-html {
+body, html {
     margin: 0;
     height: 100%;
 }
 
-#link {
-    float: right;
+#brand {
+    margin-left: 5px;
+}
+
+#brand:hover {
+    cursor: pointer;
 }
 
 #gImage {
@@ -17,6 +21,7 @@ html {
     -o-background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
+    margin-top: -20px;
 }
 
 #pImage {
@@ -24,12 +29,6 @@ html {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-}
-
-@media only screen and (max-device-width: 1366px) {
-    .GS {
-        background-attachment: scroll;
-    }
 }
 
 #gHeader {
@@ -61,13 +60,17 @@ html {
     font-size: 16px;
 }
 
+#navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
 .row {
     padding-top: 50px;
 }
 
 .Section {
-    padding-top: 50px;
-    height: 550px;
+    padding-top: 40px;
+    height: 560px;
 }
 
 .Headings {
@@ -87,7 +90,7 @@ html {
 font-family: 'Lato', sans-serif; for others */
 
 .downArrow{
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -117,10 +120,6 @@ font-family: 'Lato', sans-serif; for others */
 	animation-direction: normal;
 }
 
-#navbar {
-    margin-bottom: 0px;
-}
-
 @keyframes wiggle {
     0% {
       padding-top: 20px;
@@ -133,4 +132,10 @@ font-family: 'Lato', sans-serif; for others */
     100% {
       padding-top: 20px;
     }
-  }
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .GS {
+        background-attachment: scroll;
+    }
+}
