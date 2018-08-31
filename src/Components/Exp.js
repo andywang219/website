@@ -3,9 +3,10 @@ import './styleItUp.css';
 
 const Exp = () => {
         return (
-            <div className = 'Section'>
-                <h1 className = "Headings"> Leadership & Experience </h1>
-                    <p className = 'BodyText'><em>Ten-Tan Chinese Restaurant</em></p>
+            <div>
+                <h1 className = "headings"> Leadership & Experience </h1>
+                    <p className = 'bodyText'><em>Ten-Tan Chinese Restaurant</em></p>
+                    <p className = "subBody">I worked as a waiter</p>
             </div>
         )
 }
