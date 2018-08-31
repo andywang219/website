@@ -16,7 +16,6 @@ class MainPage extends Component {
             ref: ""
         }
         this.handleScrollToElement = this.handleScrollToElement.bind(this);
-        this.handleScrollToNext = this.handleScrollToNext.bind(this);
         this.greet = React.createRef();
         this.bio = React.createRef();
         this.edu = React.createRef();
@@ -32,6 +31,7 @@ class MainPage extends Component {
         this.handleScrollToElement();
     }
 
+    // Handles the navbar clicks
     handleScrollToElement(event) {
          if(this.state.ref === "greet") {
              this.greet.current.scrollIntoView({behavior: "smooth", block: "start"});
@@ -47,33 +47,29 @@ class MainPage extends Component {
 
     }
 
-    handleScrollToNext() {
-        this.bio.current.scrollIntoView({behavior: "smooth", block: "start"});
-    }
-
     render() {
 
         return (
             <div>
-                <Navbar id = "navbar" collapseOnSelect fixedTop fluid>
+                <Navbar id = "navbar" collapseOnSelect fixedTop>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a ref = {this.greet}  id = "brand" onClick = { () => {this.setState({ref: "greet"})}}>Andy Wang</a>
+                            <a ref = {this.greet}  id = "brand" onClick = { () => {this.setState({ref: "greet"})}}>{"<AndyWang/>"}</a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav pullRight>
-                            <NavItem ref = {this.about} onClick = { () => {this.setState({ref: "bio"})}}>
+                            <NavItem className = "link" ref = {this.about} onClick = { () => {this.setState({ref: "bio"})}}>
                                 About Me
                             </NavItem>
-                            <NavItem ref = {this.edu} onClick = { () => {this.setState({ref: "edu"})}}>
+                            <NavItem className = "link" ref = {this.edu} onClick = { () => {this.setState({ref: "edu"})}}>
                                 Education
                             </NavItem>
-                            <NavItem ref = {this.about} onClick = { () => {this.setState({ref: "exp"})}}>
+                            <NavItem className = "link" ref = {this.about} onClick = { () => {this.setState({ref: "exp"})}}>
                                 Experience
                             </NavItem>
-                            <NavItem ref = {this.about} onClick = { () => {this.setState({ref: "contact"})}}>
+                            <NavItem className = "link" ref = {this.about} onClick = { () => {this.setState({ref: "contact"})}}>
                                 Contact Me
                             </NavItem>
                         </Nav>
@@ -89,24 +85,24 @@ class MainPage extends Component {
                 </div>
 
                 <div className = "downArrow">
-                    <a className = "scroll-down" onClick = {this.handleScrollToNext}>
+                    <a className = "scroll-down" onClick = { () => {this.setState({ref: "bio"})}}>
                         <span className = "glyphicon glyphicon-chevron-down"></span>
                     </a>
                 </div>
 
-                <div className = "Section" ref = {this.bio}>
+                <div className = "section" ref = {this.bio}>
                     < Bio />
                 </div>
 
-                <div className = "Section" ref = {this.edu}>
+                <div className = "section" ref = {this.edu}>
                     < Edu />
                 </div>
 
-                <div className = "Section" ref = {this.exp}>
+                <div className = "smSection" ref = {this.exp}>
                     < Exp />
                 </div>
 
-                <div  className = "Section" ref = {this.contact}>
+                <div  className = "smSection" ref = {this.contact}>
                     < Contact />
                 </div>
             </div>
@@ -115,48 +111,3 @@ class MainPage extends Component {
 }
 
 export default MainPage;
-
-// <div id = 'GS'>
-//     <h1 className = 'Welcome'> Ni Hao & Welcome! </h1>
-//     <h2 className = 'Welcome2'> This is me </h2>
-// </div>
-
-// <a ref = "Experience" onClick = {this.handleScrollToElement}>Experience</a>
-// <a ref = "Contact" onClick = {this.handleScrollToElement}>Contact</a>
-
-
-// const scrollNode = ReactDOM.findDOMNode(this.refs.param);
-// if (event === "bio") {
-//     const scrollNode = ReactDOM.findDOMNode(this.refs.bio);
-//     scrollNode.scrollIntoView({behavior: "smooth", block: "start"});
-//     console.log("poop")
-//     // this.bio.current.scrollIntoView({behavior: "smooth", block: "start"});
-// } else if (event === "edu") {
-//     // this.edu.current.scrollIntoView({behavior: "smooth", block: "start"});
-//     const scrollNode = ReactDOM.findDOMNode(this.refs.edu);
-//     scrollNode.scrollIntoView({behavior: "smooth", block: "start"});
-//     console.log("poop")
-// }
- // scrollNode.scrollIntoView({behavior: "smooth", block: "start"});
-
- // <nav id = "navbar" className = "navbar navbar-default navbar-fixed-top">
- //       <div className = "container-fluid">
- //             <div className = "navbar-header">
- //                 <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" >
- //                     <span className = "sr-only">Toggle navigation</span>
- //                     <span className = "icon-bar"></span>
- //                     <span className = "icon-bar"></span>
- //                     <span className = "icon-bar"></span>
- //                 </button>
- //                 <a className = "navbar-brand" href="#">AndyWang</a>
- //             </div>
- //             <div className = "collapse navbar-collapse" id="bs-example-navbar-collapse-1">
- //                 <ul className = "nav navbar-nav navbar-right">
- //                     <li><a id = "link" ref = {this.about} onClick = { () => {this.setState({ref: "bio"})}}>About Me</a></li>
- //                     <li><a id = "link" ref = {this.edu} onClick = { () => {this.setState({ref: "edu"})}}>Education</a></li>
- //                     <li><a id = "link" ref = {this.exp} onClick = { () => {this.setState({ref: "exp"})}}>Experience</a></li>
- //                     <li><a id = "link" ref = {this.contact} onClick = { () => {this.setState({ref: "contact"})}}>Contact Me</a></li>
- //                 </ul>
- //             </div>
- //       </div>
- // </nav>
