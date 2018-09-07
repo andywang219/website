@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Bio from './Bio';
-import Edu from './Edu';
+import Projects from './Projects';
 import Exp from './Exp';
 import Contact from './Contact';
 let Navbar = require("react-bootstrap/lib/Navbar");
 let NavItem = require("react-bootstrap/lib/NavItem");
-let Nav = require ("react-bootstrap/lib/Nav");
+let Nav = require("react-bootstrap/lib/Nav");
 
 
 class MainPage extends Component {
@@ -16,9 +16,9 @@ class MainPage extends Component {
             ref: ""
         }
         this.handleScrollToElement = this.handleScrollToElement.bind(this);
-        this.greet = React.createRef();
+        this.welcome = React.createRef();
         this.bio = React.createRef();
-        this.edu = React.createRef();
+        this.proj = React.createRef();
         this.exp = React.createRef();
         this.contact = React.createRef();
     }
@@ -33,12 +33,12 @@ class MainPage extends Component {
 
     // Handles the navbar clicks
     handleScrollToElement(event) {
-         if(this.state.ref === "greet") {
-             this.greet.current.scrollIntoView({behavior: "smooth", block: "start"});
+         if(this.state.ref === "welcome") {
+             this.welcome.current.scrollIntoView({behavior: "smooth", block: "start"});
          } else if(this.state.ref === "bio") {
              this.bio.current.scrollIntoView({behavior: "smooth", block: "start"});
-         } else if (this.state.ref === "edu") {
-             this.edu.current.scrollIntoView({behavior: "smooth", block: "start"});
+         } else if (this.state.ref === "proj") {
+             this.proj.current.scrollIntoView({behavior: "smooth", block: "start"});
          } else if (this.state.ref === "exp") {
              this.exp.current.scrollIntoView({behavior: "smooth", block: "start"});
          } else if (this.state.ref === "contact") {
@@ -50,34 +50,51 @@ class MainPage extends Component {
     render() {
 
         return (
-            <div>
+            <div style = {{height: "100vh"}}>
                 <Navbar id = "navbar" collapseOnSelect fixedTop>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a ref = {this.greet}  id = "brand" onClick = { () => {this.setState({ref: "greet"})}}>{"<AndyWang/>"}</a>
+                            <a
+                                ref = {this.welcome}
+                                id = "brand"
+                                onClick = { () => {
+                                    this.setState({ref: "welcome"})}}>
+                                    {"<AndyWang/>"}
+                            </a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav pullRight>
-                            <NavItem className = "link" ref = {this.about} onClick = { () => {this.setState({ref: "bio"})}}>
-                                About Me
+                            <NavItem
+                                className = "link"
+                                ref = {this.about}
+                                onClick = { () => {
+                                    this.setState({ref: "bio"})}}><i className="fas fa-user" style = {{margin: "0 4px"}}></i>About Me
                             </NavItem>
-                            <NavItem className = "link" ref = {this.edu} onClick = { () => {this.setState({ref: "edu"})}}>
-                                Education
+                            <NavItem
+                                className = "link"
+                                ref = {this.proj}
+                                onClick = { () => {
+                                    this.setState({ref: "proj"})}}><i className="fas fa-project-diagram" style = {{margin: "0 4px"}}></i> Projects
                             </NavItem>
-                            <NavItem className = "link" ref = {this.about} onClick = { () => {this.setState({ref: "exp"})}}>
-                                Experience
+                            <NavItem
+                                className = "link"
+                                ref = {this.about}
+                                onClick = { () => {
+                                    this.setState({ref: "exp"})}}><i className = "fas fa-briefcase" style = {{margin: "0 4px"}}></i>Experience
                             </NavItem>
-                            <NavItem className = "link" ref = {this.about} onClick = { () => {this.setState({ref: "contact"})}}>
-                                Contact Me
+                            <NavItem
+                                className = "link"
+                                ref = {this.about} onClick = { () => {
+                                    this.setState({ref: "contact"})}}><i className="fas fa-address-book" style = {{margin: "0 4px"}}></i>Contact Me
                             </NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>;
 
 
-                <div ref = {this.greet} id = "gImage">
+                <div ref = {this.welcome} id = "gImage">
                     <div id = "gHeader">
                         <h1 id = "gHeading1"> Ni Hao & Welcome! </h1>
                         <p id = "gHeading2"> Get to Know Me! </p>
@@ -94,15 +111,15 @@ class MainPage extends Component {
                     < Bio />
                 </div>
 
-                <div className = "section" ref = {this.edu}>
-                    < Edu />
+                <div className = "smSection" ref = {this.proj}>
+                    < Projects />
                 </div>
 
-                <div className = "smSection" ref = {this.exp}>
+                <div className = "smSection" style = {{marginBottom: "100px"}} ref = {this.exp}>
                     < Exp />
                 </div>
 
-                <div  className = "smSection" ref = {this.contact}>
+                <div id = "contact" ref = {this.contact}>
                     < Contact />
                 </div>
             </div>
