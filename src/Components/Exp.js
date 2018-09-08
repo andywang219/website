@@ -21,9 +21,9 @@ class Exp extends Component {
         return (
             <div>
                 <h1 className = "headings">Leadership & Experience</h1>
-                    <p className = 'bodyText'><em>Ten-Tan Chinese Restaurant</em> Feb 2017-Present</p>
+                    <p className = 'bodyText'><em>Ten-Tan Chinese Restaurant</em> Feb 2015-Present</p>
                     <p className = "subBody" style = {{width: "70%"}}>
-                        I am currently working as a waiter at a privately owned restaurant. My responsiblities includes handling complaints, taking/preparing orders, restocking inventories, and helping customers with any questions they may have. Even though this job is not related to the Computer Science field, it has taught me many skills that are applicable. Examples of such skills are, communication, diligence, detail-oriented/precision, and multi-tasking.
+                        I am currently working as a waiter at a privately owned restaurant. My responsiblities include customer services, handling orders, and restocking inventory. Even though this job is not related to Computer Science, it has taught me many skills that are applicable. Examples of such skills are communication, diligence, precision, and multi-tasking.
                     </p>
                 <h1 className = "subHeadings">Skill Set</h1>
                 {skills}
