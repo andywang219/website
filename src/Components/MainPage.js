@@ -67,25 +67,25 @@ class MainPage extends Component {
                     <Navbar.Collapse>
                         <Nav pullRight>
                             <NavItem
-                                className = "link"
+                                className = "navLink"
                                 ref = {this.about}
                                 onClick = { () => {
                                     this.setState({ref: "bio"})}}><i className="fas fa-user" style = {{margin: "0 4px"}}></i>About Me
                             </NavItem>
                             <NavItem
-                                className = "link"
+                                className = "navLink"
                                 ref = {this.proj}
                                 onClick = { () => {
                                     this.setState({ref: "proj"})}}><i className="fas fa-project-diagram" style = {{margin: "0 4px"}}></i> Projects
                             </NavItem>
                             <NavItem
-                                className = "link"
+                                className = "navLink"
                                 ref = {this.about}
                                 onClick = { () => {
                                     this.setState({ref: "exp"})}}><i className = "fas fa-briefcase" style = {{margin: "0 4px"}}></i>Experience
                             </NavItem>
                             <NavItem
-                                className = "link"
+                                className = "navLink"
                                 ref = {this.about} onClick = { () => {
                                     this.setState({ref: "contact"})}}><i className="fas fa-address-book" style = {{margin: "0 4px"}}></i>Contact Me
                             </NavItem>

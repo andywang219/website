@@ -23,7 +23,7 @@ const Bio = () => {
                                 <br/>
                                 Computer Science
                                 <br/>
-                                Anticapted Fall 2019
+                                Anticipated Fall 2019
                             </p>
                             <p className = "bodyText">
                                 Academy of American Studies
