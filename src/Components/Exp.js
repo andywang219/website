@@ -13,7 +13,7 @@ class Exp extends Component {
         const skills = this.state.lang.map((data, i) => {
                 return (
                     <div className = "skillSet" key = {i}>
-                        <li className = "subBody"><i className = {this.state.image[i]}></i> {data} </li>
+                        <li className = "skills"><i className = {this.state.image[i]}></i> {data} </li>
                     </div>
                 )
             }
@@ -22,8 +22,8 @@ class Exp extends Component {
             <div>
                 <h1 className = "headings">Leadership & Experience</h1>
                     <p className = 'bodyText'><em>Ten-Tan Chinese Restaurant</em> Feb 2015-Present</p>
-                    <p className = "subBody" style = {{width: "70%"}}>
-                        I am currently working as a waiter at a privately owned restaurant. My responsiblities include customer services, handling orders, and restocking inventory. Even though this job is not related to Computer Science, it has taught me many skills that are applicable. Examples of such skills are communication, diligence, precision, and multi-tasking.
+                    <p className = "subBody">
+                        I am currently working as a waiter at a privately owned restaurant. My responsiblities include customer services, handling orders, and restocking inventory. Even though this job is not related to Computer Science, it has taught me many skills that are applicable. Examples of such skills are communication, diligence, precision, multi-tasking, and leadership.
                     </p>
                 <h1 className = "subHeadings">Skill Set</h1>
                 {skills}
