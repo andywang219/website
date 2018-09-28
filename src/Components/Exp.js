@@ -5,8 +5,8 @@ class Exp extends Component {
     constructor(props){
         super(props);
         this.state = {
-            lang: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Java", "Python", "SQL", "Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint"],
-            image: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-react", "fab fa-node", "fab fa-java", "fab fa-python", "fas fa-database", "fas fa-file-word", "fas fa-file-excel", "fas fa-file-powerpoint"]
+            lang: ["HTML", "CSS", "JavaScript", "reactJS", "nodeJS", "Java", "Python", "SQL", "Microsoft Word", "Microsoft Excel"],
+            image: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-react", "fab fa-node", "fab fa-java", "fab fa-python", "fas fa-database", "fas fa-file-word", "fas fa-file-excel"]
         }
     }
     render() {
