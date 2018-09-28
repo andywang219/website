@@ -29,12 +29,13 @@ body, html {
         width: 480px;
     }
 
-    #brand {
-        font-family: 'Patua One', cursive;
-        font-size: 22px;
+    #logo {
+        margin: 0 auto;
+        padding: 0;
+        width: 55px;
     }
 
-    #brand:hover {
+    #logo:hover {
         cursor: pointer;
         font-weight: bolder;
     }
@@ -85,7 +86,7 @@ body, html {
 
     #gHeading2 {
         font-family: 'Roboto Condensed', sans-serif;
-        font-size: 38px;
+        font-size: 40px;
         color: white;
         animation: 2s fadein;
         -webkit-animation: 2s fadein;
@@ -93,6 +94,7 @@ body, html {
 
     #navbar {
         background-color: rgba(255, 255, 255, 0.9);
+        height: 50px;
     }
 
     #contact {
@@ -287,11 +289,11 @@ body, html {
     }
 
     .headings {
-        font-size: 35px;
+        font-size: 38px;
     }
 
     .subHeadings {
-        font-size: 23px;
+        font-size: 29px;
     }
 
     .bodyText {
