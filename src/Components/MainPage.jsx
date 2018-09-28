@@ -22,7 +22,7 @@ class MainPage extends Component {
         this.exp = React.createRef();
         this.contact = React.createRef();
     }
-
+    
     componentDidMount() {
         this.handleScrollToElement();
     }
@@ -54,13 +54,15 @@ class MainPage extends Component {
                 <Navbar id = "navbar" collapseOnSelect fixedTop>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a
-                                ref = {this.welcome}
-                                id = "brand"
-                                onClick = { () => {
-                                    this.setState({ref: "welcome"})}}>
-                                    {"<AndyWang/>"}
-                            </a>
+                                <img
+                                    ref={this.welcome}
+                                    onClick={() => {
+                                        this.setState({ ref: "welcome" })
+                                    }}
+                                    id="logo"
+                                    alt="logo"
+                                    src={require("../pictures/logo.jpg")}>
+                                </img>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
@@ -73,7 +75,7 @@ class MainPage extends Component {
                                     this.setState({ref: "bio"})}}><i className="fas fa-user" style = {{margin: "0 4px"}}></i>About Me
                             </NavItem>
                             <NavItem
-                                className = "navLink"
+                                className = "navLink" 
                                 ref = {this.proj}
                                 onClick = { () => {
                                     this.setState({ref: "proj"})}}><i className="fas fa-project-diagram" style = {{margin: "0 4px"}}></i> Projects
@@ -97,7 +99,7 @@ class MainPage extends Component {
                 <div ref = {this.welcome} id = "gImage">
                     <div id = "gHeader">
                         <h1 id = "gHeading1"> Ni Hao & Welcome! </h1>
-                        <p id = "gHeading2"> Get to Know Me! </p>
+                        <p id = "gHeading2"> I'm Andy! </p>
                     </div>
                 </div>
 
