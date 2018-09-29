@@ -54,13 +54,14 @@ class MainPage extends Component {
                 <Navbar id = "navbar" collapseOnSelect fixedTop>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a
+                             <img 
                                 ref = {this.welcome}
                                 id = "brand"
                                 onClick = { () => {
-                                    this.setState({ref: "welcome"})}}>
-                                    {"<AndyWang/>"}
-                            </a>
+                                    this.setState({ref: "welcome"})}}
+                                src = {require("../pictures/logo.jpg")}
+                                alt = "logo" >
+                            </img>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
@@ -91,13 +92,13 @@ class MainPage extends Component {
                             </NavItem>
                         </Nav>
                     </Navbar.Collapse>
-                </Navbar>;
+                </Navbar>
 
 
                 <div ref = {this.welcome} id = "gImage">
                     <div id = "gHeader">
                         <h1 id = "gHeading1"> Ni Hao & Welcome! </h1>
-                        <p id = "gHeading2"> Get to Know Me! </p>
+                        <p id = "gHeading2"> I'm Andy! </p>
                     </div>
                 </div>
 
