@@ -9,11 +9,7 @@ class Projects extends Component {
         return (
             <div className="flexCenter">
                 <h1 className="headings">Projects</h1>
-                <MuiThemeProvider theme={createMuiTheme({
-                    palette: {
-                        primary: { main: "#2196f3" }
-                    }
-                })}>
+ 
                     <Grid container spacing={8} className="flexRow" style={{ marginTop: "15px", width: "100%" }}>
                         <Grid item xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
                             <Paper className="projects">
@@ -70,7 +66,7 @@ class Projects extends Component {
                             </Paper>
                         </Grid>
                     </Grid>
-                </MuiThemeProvider>
+
           </div>
         )
     }
