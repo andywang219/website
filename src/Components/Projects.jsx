@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Typography, Grid, Paper, Button, MuiThemeProvider,
-    createMuiTheme } from '@material-ui/core';
+import { Typography, Grid, Paper, Button} from '@material-ui/core';
 import './styleItUp.css';
 
 class Projects extends Component {
