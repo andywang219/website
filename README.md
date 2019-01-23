@@ -4,6 +4,7 @@
 <li>Material UI </li>
 <li>Bootstrap</li>
 <hr/>
-<h2>Latest Version Utilizes:</h2>
+<h2>Latest Version Utilizes Just:</h2>
 <li>CSS</li>
 <li>HTML</li>
+<li>JavaScript</li>
