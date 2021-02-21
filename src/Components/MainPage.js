@@ -102,26 +102,31 @@ class MainPage extends Component {
                     </div>
                 </div>
 
+                {/* <div ref = {this.welcome} className = "myVideo">
+                    <video loop autoPlay muted>
+                        <source src = {require("../video/welMov.mp4")} type = "video/mp4"></source> 
+                    </video>
+                </div> */}
+
                 <div className = "downArrow">
                     <a className = "scroll-down" onClick = { () => {this.setState({ref: "bio"})}}>
-                        <span className = "glyphicon glyphicon-chevron-down"></span>
+                        <span className = "fas fa-angle-double-down"></span>
                     </a>
                 </div>
 
-                <div className = "section" ref = {this.bio}>
+                <div id = "bioSection" ref = {this.bio}>
                     < Bio />
                 </div>
 
-                <div className = "smSection" ref = {this.proj}>
+                <div id = "projectSection" ref = {this.proj}>
                     < Projects />
                 </div>
 
-                <div className = "smSection" style = {{marginBottom: "100px"}} ref = {this.exp}>
+                <div id = "expLdrSection" ref = {this.exp}>
                     < Exp />
-                </div>
-
-                <div id = "contact" ref = {this.contact}>
-                    < Contact />
+                    <div id = "contact" ref = {this.contact}>
+                        < Contact / >
+                    </div>
                 </div>
             </div>
         );
